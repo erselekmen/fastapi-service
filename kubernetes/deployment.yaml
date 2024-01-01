@@ -16,6 +16,13 @@ spec:
     spec:
       containers:
       - name: fastapi-service
-        image: erselekmen/fastapi-service:0.0.1
+        image: erselekmen/fastapi-service:0.0.3
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 200m
+            memory: 300Mi
+          limits:
+            memory: 400Mi
+
